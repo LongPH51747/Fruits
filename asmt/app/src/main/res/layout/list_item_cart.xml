@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="10dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:layout_width="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="7dp"
+            android:id="@+id/chk_hidden_kh"
+            android:layout_height="20dp"/>
+
+        <ImageView
+            android:id="@+id/img_sp_cart"
+            android:layout_marginVertical="10dp"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_toRightOf="@+id/chk_hidden_kh"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        <ImageView
+            android:id="@+id/img_delete"
+            android:layout_marginVertical="10dp"
+            android:src="@drawable/delete"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Tên: Cam"
+            android:id="@+id/tv_ten_sp_cart"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/img_sp_cart"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:id="@+id/tv_price_sp_cart"
+            android:layout_below="@+id/tv_ten_sp_cart"
+            android:layout_toRightOf="@+id/img_sp_cart"
+            android:text="Giá: 20000"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/tv_kg_sp_cart"
+            android:layout_below="@+id/tv_price_sp_cart"
+            android:layout_toRightOf="@+id/img_sp_cart"
+            android:text="KG: 5"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

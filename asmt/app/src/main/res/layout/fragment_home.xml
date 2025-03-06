@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#85B6FFB9"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    >
+
+
+    <RelativeLayout
+        android:background="#ffff"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:paddingBottom="10dp"
+            android:src="@drawable/person"
+            android:layout_marginHorizontal="10dp"
+            android:id="@+id/img_person"
+            android:layout_alignBottom="@+id/tvtittle"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/search"
+            android:paddingBottom="10dp"
+            android:layout_alignBottom="@+id/tvtittle"
+            android:id="@+id/img_search"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:id="@+id/tvwelcome"
+            android:text="Welcome to"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_below="@+id/tvwelcome"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+
+            android:text="Healthy mart"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:id="@+id/tvtittle"
+            android:textColor="#037700"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:fillViewport="true"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp">
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/viewPagerBanner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </androidx.cardview.widget.CardView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    app:spanCount="2"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/list_item_sp_kh"
+                    android:id="@+id/rc_sp" />
+                </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

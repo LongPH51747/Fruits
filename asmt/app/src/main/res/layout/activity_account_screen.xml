@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="#D3B6FFB9"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".screen.AccountScreen">
+    <RelativeLayout
+        android:background="#ffff"
+        android:paddingTop="20dp"
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="50dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/back"
+            android:layout_marginHorizontal="10dp"
+            android:id="@+id/img_back"
+            android:layout_alignBottom="@+id/tvtittle"
+            android:layout_height="50dp"/>
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:text="Create your profile"
+            android:layout_margin="10dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:id="@+id/tvtittle"
+            android:textColor="#037700"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/borderlogo"
+            android:id="@+id/img_profile"
+            app:srcCompat="@android:drawable/ic_menu_camera"
+            android:layout_height="100dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/ed_fisrt_name"
+                android:hint="Fisrtname"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/ed_last_name"
+                android:hint="Lastname"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/ed_date_born"
+                android:background="@color/white"
+                android:layout_marginHorizontal="10dp"
+                android:hint="dd-mm-yyyy"
+                android:focusable="false"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:inputType="phone"
+                android:id="@+id/ed_phone"
+                android:background="@color/white"
+                android:layout_marginHorizontal="10dp"
+                android:hint="Phone number"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/btn_crate_profile"
+            android:text="Create profile"
+            android:layout_margin="10dp"
+            android:backgroundTint="#00554C"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
